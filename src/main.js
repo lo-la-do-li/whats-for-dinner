@@ -8,13 +8,18 @@
 //     }
 // }
 
-
+//VARIABLES
 var side = document.querySelector(".side");
 var mainDish = document.querySelector(".main-dish");
 var dessert = document.querySelector(".dessert");
 var entireMeal = document.querySelector(".entire-meal");
-var letsCook = document.querySelector(".cook-button");
 
-letsCook.addEventListener("click", function(){
-    console.log("clicked");
-});
+var letsCookButton = document.querySelector(".cook-button");
+
+var randomDish = document.querySelector(".randomDish");
+
+//EVENT LISTENERS
+letsCookButton.addEventListener("click", getRandomFoods)
+
+
+//FUNCTIONS

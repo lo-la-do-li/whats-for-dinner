@@ -8,21 +8,26 @@
       <h3>What's for Dinner?</h3>
       <button class='recipe-button'>ADD A RECIPE</button>
     </header>
-    <div class='box1'>
-      <h3 class='radio-button'>What are you looking for?</h3>
-      <input class='radio-button' type='radio' value='Side'></input>
-      <label>Side</label> <br>
-      <input class='radio-button' type='radio' value='Main Dish'></input>
-      <label>Main Dish</label> <br>
-      <input class='radio-button' type='radio'></input>
-      <label>Dessert</label> <br>
-      <input class='radio-button' type='radio'></input>
-      <label>Entire Meal</label> <br>
+    <article class='box1'>
+      <h3 class='lookingHeader'>What are you looking for?</h3>
+
+      <input class='radio-button' type='radio' name='radio' value='Side'>Side</input> <br>
+
+      <input class='radio-button' type='radio' name='radio' value='Main Dish'>Main Dish</input> <br>
+
+      <input class='radio-button' type='radio' name='radio'>Dessert</input> <br>
+
+      <input class='radio-button' type='radio' name='radio'>Entire Meal</input> <br>
+
       <button class='cook-button'>Lets Cook</button>
-    </div>
-    <div class='box2'>
-      <img class="cookpot" src="assets/cookpot.svg" alt="cookpot">
-    </div>
+
+    </article>
+    <article class='box2'>
+      <img class="cookpot hidden" src="assets/cookpot.svg" alt="cookpot">
+      <div class="randomDish hidden"><em>You should make:</em>
+          <h1 class="randomDish">placeholder</h1>
+      </div>
+    </article>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
