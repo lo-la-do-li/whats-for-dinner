@@ -1,25 +1,55 @@
-// var radios = document.getElementsByTagName('input');
-// var value;
-// for (var i = 0; i < radios.length; i++) {
-//     if (radios[i].type === 'radio' && radios[i].checked) {
-//         // get value, set checked flag or do whatever you need to
-//         value = radios[i].value;
-//         console.log(value)
-//     }
-// }
+
 
 //VARIABLES
-var side = document.querySelector(".side");
-var mainDish = document.querySelector(".main-dish");
-var dessert = document.querySelector(".dessert");
-var entireMeal = document.querySelector(".entire-meal");
+// var side = document.querySelector(".side");
+// var mainDish = document.querySelector(".main-dish");
+// var dessert = document.querySelector(".dessert");
+// var entireMeal = document.querySelector(".entire-meal");
 
 var letsCookButton = document.querySelector(".cook-button");
 
 var randomDish = document.querySelector(".randomDish");
 
+// var inputs = document.getElementsByTagName('input');
+//
+// for(var i = 0; i < inputs.length; i++) {
+//     if(inputs[i].checked) {
+//         alert(inputs[i].value);
+//     }
+// }
+
 //EVENT LISTENERS
-letsCookButton.addEventListener("click", getRandomFoods)
+letsCookButton.addEventListener("click", getRandomDish);
 
 
 //FUNCTIONS
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+function getRandomDish() {
+  var inputs = document.getElementsByTagName('input');
+  var selection = ''
+  for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].checked) {
+      selection = inputs[i].value;
+    }
+  }
+
+  var randomSelection = ''
+  if (selection == 'side') {
+    randomSelection = getRandomElement(sides);
+  } else if (selection == 'main-dish') {
+    randomSelection = getRandomElement(mains);
+  } else if (selection == 'dessert') {
+    randomSelection = getRandomElement(desserts);
+  }
+  randomDish.innerText = `${randomSelection}!`;
+}
+
+// function showRandomDish() {
+//   getRandomDish();
+//   randomDish.innerText = `${}!`;
+//   hideCookpot();
+//   uncheckRadioButton();
+// }
