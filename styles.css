@@ -75,6 +75,10 @@ h2 {
   display: flex;
   justify-content: center;
 }
+
+.hidden {
+  display: none;
+}
 .randomDish {
   display: flex;
     flex-direction: column;
@@ -82,54 +86,3 @@ h2 {
     margin-top: auto;
     margin-bottom: auto;
   }
-/*
-.box1 input[type='radio'] {
-	display: none;
-  color: purple;
-}
-.box1 label {
-	position: relative;
-	display: inline-block;
-	padding: 3px 3px 3px 20px;
-	cursor: pointer;
-  color: purple;
-}
-.box1 label::before,
-.box1 label::after {
-	position: absolute;
-	content: '';
-	top: 50%;
-	border-radius: 100%;
-	-webkit-transition: all .2s;
-	transition: all .2s;
-}
-.box1 label::before {
-	left: 0;
-	width: 14px;
-	height: 14px;
-	margin-top: -8px;
-	background: #f3f3f3;
-	border: 1px solid #ccc;
-}
-.box1 label:hover::before {
-	background: #fff;
-}
-.box1 label::after {
-	opacity: 0;
-	left: 4px;
-	width: 8px;
-	height: 8px;
-	margin-top: -4px;
-	background: #3498db;
-	-webkit-transform: scale(2);
-	transform: scale(2);
-}
-.box1 input[type='radio']:checked + label::before {
-	background: #fff;
-	border: 1px solid #3498db;
-}
-.box1 input[type='radio']:checked + label::after {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-} */
