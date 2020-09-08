@@ -1,36 +1,27 @@
-
-
 //VARIABLES
 
 var letsCookButton = document.querySelector(".cook-button");
-
+var cookPot = document.querySelector(".cookpot");
 var randomDish = document.querySelector(".randomDish");
-
-// var inputs = document.getElementsByTagNamatome('input');
-//
-// for(var i = 0; i < inputs.length; i++) {
-//     if(inputs[i].checked) {
-//         alert(inputs[i].value);
-//     }
-// }
-
-//EVENT LISTENERS
-letsCookButton.addEventListener("click", getRandomDish);
-
+var suggestADish = document.querySelector(".suggestion-div");
+var clearButton = document.querySelector(".clear-button");
 
 var selection = '';
-var rad = document.getElementsByTagName('input');
-var prev = null;
+var radios = document.getElementsByTagName('input');
+var checked = null;
 
-for (var i = 0; i < rad.length; i++) {
-    rad[i].addEventListener('change', function() {
-        (prev) ? console.log(prev.value): null;
-        if (this !== prev) {
+for (var i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('change', function() {
+        if (this !== checked) {
             selection = this.value
             letsCookButton.disabled = false;
         }
     });
 }
+
+//EVENT LISTENERS
+letsCookButton.addEventListener("click", getRandomDish);
+clearButton.addEventListener("click", clearSuggestion);
 
 
 //FUNCTIONS
@@ -39,17 +30,11 @@ function getRandomElement(array) {
 }
 
 function getRandomDish() {
-  // var inputs = document.getElementsByTagName('input');
-  // var selection = '';
+
   var randomSelection = '';
   var sideDish = '';
   var mainDish = '';
   var dessert = '';
-  // for(var i = 0; i < inputs.length; i++) {
-  //   if(inputs[i].checked) {
-  //     selection = inputs[i].value;
-  //   }
-  // }
 
   if (selection == 'side') {
     randomSelection = getRandomElement(sides);
@@ -66,12 +51,20 @@ function getRandomDish() {
     else if (selection !== null) {
       element.disabled = false
     }
+  hideCookPot();
+  showSuggestion();
   randomDish.innerText = `${randomSelection}!`;
 }
 
-// function showRandomDish() {
-//   getRandomDish();
-//   randomDish.innerText = `${}!`;
-//   hideCookpot();
-//   uncheckRadioButton();
-// }
+function hideCookPot() {
+  cookPot.classList.add('hidden');
+}
+
+function showSuggestion() {
+  suggestADish.classList.remove('hidden');
+}
+
+function clearSuggestion() {
+  suggestADish.classList.add('hidden');
+  cookPot.classList.remove('hidden');
+}

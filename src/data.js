@@ -8,9 +8,7 @@ var sides = [
  'Ceasar salad',
  'Shrimp Summer Rolls',
  'Garlic Butter Mushrooms',
- 'Hush Puppies',
- 'Isaac\'s Special Side',
- 'Cheesy Biscuits'
+ 'Hush Puppies'
 ]
 
 var mains = [

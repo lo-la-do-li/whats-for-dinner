@@ -12,24 +12,31 @@
     <article class='box1'>
       <h3 class='lookingHeader'>What are you looking for?</h3>
       <div class='radio-button'>
-      <input class='side' type='radio' name='radio' value='side'>Side</input> <br>
+        <input class='side' type='radio' name='radio' value='side'>Side</input> <br>
 
-      <input class='main-dish' type='radio' name='radio' value='main-dish'>Main Dish</input> <br>
+        <input class='main-dish' type='radio' name='radio' value='main-dish'>Main Dish</input> <br>
 
-      <input class='dessert' type='radio' name='radio' value='dessert'>Dessert</input> <br>
+        <input class='dessert' type='radio' name='radio' value='dessert'>Dessert</input> <br>
 
-      <input class='entire-meal' type='radio' name='radio' value='entire-meal'>Entire Meal</input> <br>
+        <input class='entire-meal' type='radio' name='radio' value='entire-meal'>Entire Meal</input> <br>
+      </div>
+      <div>
+        <button class='cook-button' disabled>Lets Cook!</button>
+      </div>
+    </article>
+    <article class='box2'>
+      <div class='box-flex'>
+      <img class="cookpot" src="assets/cookpot.svg" alt="cookpot">
+      <div class = 'you-should-make-div'>
+        <div class='suggestion-div hidden'>
+        <em>You should make:</em><h1 class="randomDish">...</h1>
+        <button class = 'clear-button'>CLEAR</button>
+        </div>
+      </div>
 
-      <button class='cook-button' disabled>Lets Cook</button>
     </div>
     </article>
 
-    <article class='box2'>
-      <img class="cookpot hidden" src="assets/cookpot.svg" alt="cookpot">
-      <div><em>You should make:</em>
-          <h1 class="randomDish">...</h1>
-      </div>
-    </article>
   </body>
   <script type="text/javascript" src="src/main.js"></script>
     <script type="text/javascript" src="src/data.js"></script>

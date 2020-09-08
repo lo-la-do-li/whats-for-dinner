@@ -7,15 +7,27 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+.header {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0fb9b1;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .lookingHeader {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1em;
   margin-left: 1em;
 }
+input {
 
+}
 .radio-button {
-  margin-bottom: 1em;
-  margin-right: 1em;
+  display: block;
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
 .cook-button {
@@ -27,17 +39,11 @@ red - #ee5253
   margin-left: 1em;
 
 }
-.header {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0fb9b1;
-  padding: 10px;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-}
+
 h2 {
 
 }
+
 .recipe-button {
   border-radius: 8px;
   height: 40px;
@@ -55,25 +61,30 @@ h2 {
   margin-top: 3em;
   margin-left: 5em;
   margin-bottom: 3em;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 350px;
   background-color: rgba(225, 225, 225, .9);
   float: left;
+
 }
 .box2 {
   margin-top: 3em;
   margin-right: 5em;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 350px;
   background-color: rgba(225, 225, 225, .9);
   float: right;
+  display: flex;
+  justify-content: center;
 }
-
+.box-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .cookpot {
   width: 100px;
   height: 100px;
-  display: flex;
-  justify-content: center;
 }
 
 .hidden {
@@ -81,8 +92,20 @@ h2 {
 }
 .randomDish {
   display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+  flex-direction: column;
+  padding: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.suggestion-div{
+  text-align: -webkit-center;
+  padding-bottom: 20px
+}
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5%;
+}
